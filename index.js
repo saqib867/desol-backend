@@ -12,7 +12,6 @@ const app = express()
 app.use(cors({
     origin: 'https://desol-frontend-two.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
   }));
   res.setHeader("Access-Control-Allow-Origin", "https://desol-frontend-two.vercel.app");
 // database connection
