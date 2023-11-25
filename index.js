@@ -9,9 +9,13 @@ import bodyParser from 'body-parser'
 
 const app = express()
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://desol-frontend-two.vercel.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  }));
 // database connection
-app.use(express.json())
+app.use(express.json())     //hgkhghj
 app.use(bodyParser.json())
 const uri = 'mongodb+srv://husainsaqib31:moeZBOfDWvG9yC1d@cluster0.kbgs5wm.mongodb.net/desol?retryWrites=true&w=majority'
 
