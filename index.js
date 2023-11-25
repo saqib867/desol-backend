@@ -9,10 +9,7 @@ import bodyParser from 'body-parser'
 
 const app = express()
 
-app.use(cors({
-    origin: 'https://desol-frontend-two.vercel.app',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  }));
+app.use(cors());
   res.setHeader("Access-Control-Allow-Origin", "https://desol-frontend-two.vercel.app");
 // database connection
 app.use(express.json())     //hgkhghj
