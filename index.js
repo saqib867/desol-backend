@@ -5,16 +5,14 @@ import cors from 'cors'
 import authrouter from './routes/user.route.js'
 import carRouter from './routes/car.route.js'
 import mongoose from 'mongoose'
+import bodyParser from 'body-parser'
 
 const app = express()
 
-app.use(cors({
-    origin: 'https://desol-frontend-nine.vercel.app',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-  }));
+app.use(cors());
 // database connection
 app.use(express.json())
+app.use(bodyParser.json())
 const uri = 'mongodb+srv://husainsaqib31:moeZBOfDWvG9yC1d@cluster0.kbgs5wm.mongodb.net/desol?retryWrites=true&w=majority'
 
 const connection = mongoose.connect(uri)
