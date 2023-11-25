@@ -7,7 +7,7 @@ import carRouter from './routes/car.route.js'
 import mongoose from 'mongoose'
 
 const app = express()
-app.use(express.json())
+
 const allowedOrigins = [
     'https://desol-frontend-nine.vercel.app',
     // Add other allowed origins if needed
@@ -23,7 +23,7 @@ const allowedOrigins = [
     },
   }));s
 // database connection
-
+app.use(express.json())
 const uri = 'mongodb+srv://husainsaqib31:moeZBOfDWvG9yC1d@cluster0.kbgs5wm.mongodb.net/desol?retryWrites=true&w=majority'
 
 const connection = mongoose.connect(uri)
