@@ -13,7 +13,7 @@ const corsOptions = {
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
     optionsSuccessStatus: 200,
-    preflightContinue:true
+    preflightContinue:false
   };
 app.use(cors(corsOptions));
 
