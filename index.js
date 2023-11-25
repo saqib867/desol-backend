@@ -14,6 +14,7 @@ app.use(cors({
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   }));
+  res.setHeader("Access-Control-Allow-Origin", "https://desol-frontend-two.vercel.app");
 // database connection
 app.use(express.json())     //hgkhghj
 app.use(bodyParser.json())
