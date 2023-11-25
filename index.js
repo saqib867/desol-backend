@@ -8,9 +8,13 @@ import mongoose from 'mongoose'
 
 const app = express()
 app.use(express.json())
-app.use(cors({
-    origin: 'https://desol-frontend-liard.vercel.app'
-}));
+const corsOptions = {
+    origin: 'https://desol-frontend-liard.vercel.app',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+    optionsSuccessStatus: 200,
+  };
+app.use(cors(corsOptions));
 
 // database connection
 
