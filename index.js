@@ -15,7 +15,7 @@ const corsOptions = {
     optionsSuccessStatus: 200,
     
   };
-app.use(cors());
+app.use(cors({origin:'https://desol-frontend-liard.vercel.app'}));
 
 // database connection
 
