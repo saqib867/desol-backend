@@ -22,7 +22,7 @@ app.use(cors({origin:'https://desol-frontend-liard.vercel.app'}));
 const uri = 'mongodb+srv://husainsaqib31:moeZBOfDWvG9yC1d@cluster0.kbgs5wm.mongodb.net/desol?retryWrites=true&w=majority'
 
 const connection = mongoose.connect(uri)
-connection.then(()=>{
+connection.then(()=>{       //lkjhkljlj
        console.log("mongodb connected successfully")
 })
 .catch((err)=>{
