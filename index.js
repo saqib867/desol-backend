@@ -8,14 +8,20 @@ import mongoose from 'mongoose'
 
 const app = express()
 app.use(express.json())
-app.use(
-    cors({
-      origin: 'https://desol-frontend-nine.vercel.app',
-      preflightContinue: true,
-      methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-      credentials: true,
-    })
-  );
+const allowedOrigins = [
+    'https://desol-frontend-nine.vercel.app',
+    // Add other allowed origins if needed
+  ];
+  
+  app.use(cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+  }));s
 // database connection
 
 const uri = 'mongodb+srv://husainsaqib31:moeZBOfDWvG9yC1d@cluster0.kbgs5wm.mongodb.net/desol?retryWrites=true&w=majority'
