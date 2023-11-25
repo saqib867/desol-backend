@@ -10,7 +10,7 @@ const app = express()
 app.use(express.json())
 app.use(
     cors({
-      origin: '*',
+      origin: 'https://desol-frontend-nine.vercel.app',
       preflightContinue: true,
       methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
       credentials: true,
