@@ -18,9 +18,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions))
 // database connection
-app.use(express.json())     //hgkhghj
+app.use(express.json())     
 app.use(bodyParser.json())
 const uri = 'mongodb+srv://husainsaqib31:moeZBOfDWvG9yC1d@cluster0.kbgs5wm.mongodb.net/desol?retryWrites=true&w=majority'
+// once upon a time there lilved a stage 
 
 const connection = mongoose.connect(uri)
 connection.then(()=>{
