@@ -28,6 +28,8 @@ connection.then(()=>{
         console.log("error while connecting database",err)
 })
 
+app.options('*', cors())
+
 app.use('/api',authrouter)
 app.use('/api',carRouter)  
 
