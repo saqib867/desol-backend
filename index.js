@@ -8,7 +8,7 @@ import mongoose from 'mongoose'
 
 const app = express()
 app.use(express.json())
-app.use(cors({origin:"https://desol-backend-kappa.vercel.app/"}))
+app.use(cors())
 
 // database connection
 
