@@ -9,13 +9,13 @@ import mongoose from 'mongoose'
 const app = express()
 app.use(express.json())
 const corsOptions = {
-    origin: 'https://desol-frontend-liard.vercel.app',
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type'],
-    optionsSuccessStatus: 200,
-    
-  };
-app.use(cors({origin:'https://desol-frontend-liard.vercel.app'}));
+       origin: 'https://your-frontend.vercel.app', // Replace with your frontend URL
+       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+       credentials: true,
+     };
+     
+     app.options(cors(corsOptions));
+app.use('*',cors(corsOptions));
 
 // database connection
 
