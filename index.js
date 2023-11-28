@@ -9,7 +9,7 @@ import mongoose from 'mongoose'
 const app = express()
 app.use(express.json())
 const corsOptions = {
-       origin: 'https://your-frontend.vercel.app', // Replkjhlkjhjkhace with your frontend URL
+       origin: 'http://localhost:3000', // Replkjhlkjhjkhace with your frontend URL
        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', ///lkajsdflkja;sdlf
        credentials: true,
      };
